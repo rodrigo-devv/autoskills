@@ -1,0 +1,163 @@
+/* Terminal aesthetic: dark background, green accents, boxy buttons. */
+
+Screen {
+    background: #0c0c0c;
+    color: #d0d0d0;
+}
+
+#title, #confirm-title {
+    color: #00d75f;
+    text-style: bold;
+    padding: 1 0;
+    content-align: center middle;
+    width: 100%;
+}
+
+/* ── Setup screen ─────────────────────────────────────────── */
+
+#setup-panel {
+    padding: 1 4;
+}
+
+#setup-panel Label {
+    color: #00d75f;
+    margin-top: 1;
+}
+
+Input {
+    background: #161616;
+    border: round #3a3a3a;
+}
+
+Input:focus {
+    border: round #00d75f;
+}
+
+#url-bar, #dir-bar {
+    height: auto;
+}
+
+#url-bar Input, #dir-bar Input {
+    width: 1fr;
+}
+
+#repo-list {
+    margin-top: 1;
+    padding: 1;
+    min-height: 4;
+    border: round #3a3a3a;
+    color: #9e9e9e;
+}
+
+#setup-actions, #skills-actions, #confirm-actions {
+    height: auto;
+    margin-top: 1;
+    align-horizontal: center;
+}
+
+Button {
+    background: #161616;
+    color: #d0d0d0;
+    border: round #3a3a3a;
+    min-width: 14;
+    margin: 0 1;
+}
+
+Button:hover {
+    border: round #00d75f;
+    color: #00d75f;
+}
+
+Button.-primary {
+    color: #00d75f;
+    border: round #00875f;
+}
+
+Button.-error {
+    color: #ff5f5f;
+    border: round #875f5f;
+}
+
+#setup-status, #skills-status {
+    margin-top: 1;
+    content-align: center middle;
+    width: 100%;
+    color: #9e9e9e;
+}
+
+.error-text {
+    color: #ff5f5f;
+}
+
+/* ── Skills screen ────────────────────────────────────────── */
+
+#target-line {
+    color: #9e9e9e;
+    content-align: center middle;
+    width: 100%;
+}
+
+#skill-list {
+    margin: 1 4;
+    border: round #3a3a3a;
+    height: 1fr;
+}
+
+.skill-row {
+    height: auto;
+    padding: 0 1;
+    border-bottom: dashed #2a2a2a;
+}
+
+.skill-check {
+    background: transparent;
+    border: none;
+    width: auto;
+}
+
+.skill-info {
+    width: 1fr;
+    height: auto;
+    padding: 0 1;
+}
+
+.skill-name {
+    color: #ffffff;
+    text-style: bold;
+}
+
+.skill-desc {
+    color: #9e9e9e;
+}
+
+.skill-status {
+    width: auto;
+    min-width: 12;
+    content-align: right middle;
+}
+
+.status-pending   { color: #9e9e9e; }
+.status-importing { color: #ffd75f; }
+.status-success   { color: #00d75f; }
+.status-failed    { color: #ff5f5f; }
+
+/* ── Confirm dialog ───────────────────────────────────────── */
+
+ConfirmScreen {
+    align: center middle;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#confirm-dialog {
+    width: 60;
+    height: auto;
+    padding: 1 2;
+    background: #161616;
+    border: round #00d75f;
+}
+
+#confirm-message {
+    content-align: center middle;
+    width: 100%;
+    padding: 1 0;
+}

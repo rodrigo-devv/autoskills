@@ -1,0 +1,26 @@
+[project]
+name = "odysseus-skill-importer"
+version = "0.1.0"
+description = "Terminal TUI to import skills from GitHub repositories into an Odysseus skills directory."
+requires-python = ">=3.11"
+dependencies = [
+    "textual>=0.58",
+]
+
+[project.scripts]
+odysseus-importer = "odysseus_importer.app:run"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["odysseus_importer*"]
+
+[tool.setuptools.package-data]
+odysseus_importer = ["*.tcss"]
